@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavigationMenu from "./NavigationMenu";
 
 const navItems = [
   { text: "Features", href: "#features" },
@@ -15,6 +16,7 @@ const Navigation = () => {
             {item.text}
           </Link>
         ))}
+        <NavigationMenu title="Pages" items={[]} />
       </div>
     </nav>
   );
