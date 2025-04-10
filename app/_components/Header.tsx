@@ -1,4 +1,5 @@
 import Button from "./Button";
+import HeaderMobileMenu from "./HeaderMobileMenu";
 import HeaderSearch from "./HeaderSearch";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
@@ -11,11 +12,12 @@ const Header = () => {
         <Navigation />
       </div>
       <div className="flex items-center gap-6">
-        <div className="flex items-center gap-4">
+        <div className="hidden lg:flex lg:items-center lg:gap-4">
           <Button color="blue">Sign in</Button>
           <Button color="dark">Sign up</Button>
         </div>
         <HeaderSearch />
+        <HeaderMobileMenu />
       </div>
     </header>
   );

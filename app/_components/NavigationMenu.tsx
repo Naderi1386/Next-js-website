@@ -17,11 +17,15 @@ const NavigationMenu = ({ title, items }: NavigationMenuPropsType) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className="relative inline-block hover:text-white"
+      className="relative inline-block "
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <div className="text-[#79808a] transition-all duration-150  flex items-center gap-2 cursor-pointer">
+      <div
+        className={`${
+          isOpen ? "text-white scale-105" : "text-[#79808a]"
+        }   transition-all duration-150  flex items-center gap-2 cursor-pointer`}
+      >
         {title}
         {isOpen ? <FaAngleUp /> : <FaAngleDown />}
       </div>

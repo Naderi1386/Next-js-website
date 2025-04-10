@@ -9,7 +9,7 @@ const navItems = [
 
 const Navigation = () => {
   return (
-    <nav>
+    <nav className="hidden lg:block">
       <div className="flex items-center gap-10">
         {navItems.map((item) => (
           <Link
