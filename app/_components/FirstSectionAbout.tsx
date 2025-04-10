@@ -4,14 +4,14 @@ import { FaPlay } from "react-icons/fa";
 
 const FirstSectionAbout = () => {
   return (
-    <div className="basis-[50%] text-white">
+    <div className="basis-full text-center lg:text-left lg:basis-[50%] text-white">
       <div className="inline-flex items-center gap-2 rounded-3xl py-3 px-4 bg-white/10 mb-8 ">
         <div className="w-[8px] h-[8px] rounded-[100%] bg-blue-500"></div>
         <span className="block font-semibold">
           Next.js Starter for Business
         </span>
       </div>
-      <h1 className="font-bold text-5xl w-[500px] leading-[60px] mb-6">
+      <h1 className="font-bold text-5xl w-[510px] lg:w-[500px] leading-[60px] mb-6">
         Next.js Boilerplate for Your Business
       </h1>
       <p className="text-[#79808a] w-[530px] mb-14">
@@ -19,7 +19,7 @@ const FirstSectionAbout = () => {
         SaaS Website. Comes with refreshing design, integrations and everything
         you need to kickstart your next web project.
       </p>
-      <div className="flex items-center gap-5">
+      <div className="flex justify-center lg:justify-start items-center gap-5">
         <Button color="blue">
           <span className="flex items-center gap-2">
             Get Started <MdArrowRightAlt size={22} color="white" />
