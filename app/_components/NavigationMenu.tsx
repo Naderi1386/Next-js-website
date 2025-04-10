@@ -17,7 +17,7 @@ const NavigationMenu = ({ title, items }: NavigationMenuPropsType) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className="relative"
+      className="relative inline-block"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
