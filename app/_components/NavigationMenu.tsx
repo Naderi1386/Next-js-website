@@ -27,7 +27,6 @@ const NavigationMenu = ({ title, items }: NavigationMenuPropsType) => {
       </div>
 
       {isOpen && <NavigationMenuBox items={items} />}
-
     </div>
   );
 };
