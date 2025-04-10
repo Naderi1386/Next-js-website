@@ -1,10 +1,19 @@
 import Link from "next/link";
-import NavigationMenu from "./NavigationMenu";
+import NavigationMenu, { NavigationMenuItemType } from "./NavigationMenu";
 
-const navItems = [
+export const navItems = [
   { text: "Features", href: "#features" },
   { text: "About", href: "#about" },
   { text: "Portfolio", href: "#portfolio" },
+];
+export const items: NavigationMenuItemType[] = [
+  { text: "Home", href: "/" },
+  { text: "Docs", href: "/" },
+  { text: "Support", href: "/" },
+  { text: "Blog", href: "/" },
+  { text: "Sign in", href: "/" },
+  { text: "Sign up", href: "/" },
+  { text: "Error 404", href: "/" },
 ];
 
 const Navigation = () => {
@@ -22,15 +31,7 @@ const Navigation = () => {
         ))}
         <NavigationMenu
           title="Pages"
-          items={[
-            { text: "Home", href: "/" },
-            { text: "Docs", href: "/" },
-            { text: "Support", href: "/" },
-            { text: "Blog", href: "/" },
-            { text: "Sign in", href: "/" },
-            { text: "Sign up", href: "/" },
-            { text: "Error 404", href: "/" },
-          ]}
+          items={items}
         />
       </div>
     </nav>

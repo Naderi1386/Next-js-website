@@ -4,10 +4,11 @@ import { IoClose } from "react-icons/io5";
 import HeaderSearch from "./HeaderSearch";
 import Logo from "./Logo";
 import Button from "./Button";
-interface MobileMenuSectionPropsType{
-    onClose:()=>void
+import MobileMenuNavigation from "./MobileMenuNavigation";
+interface MobileMenuSectionPropsType {
+  onClose: () => void;
 }
-const MobileMenuSection = ({onClose}: MobileMenuSectionPropsType) => {
+const MobileMenuSection = ({ onClose }: MobileMenuSectionPropsType) => {
   return (
     <div className="bg-[#111722] fixed inset-0 px-8 py-4 font-semibold z-[100] flex flex-col">
       <div className="flex items-center justify-between">
@@ -20,7 +21,7 @@ const MobileMenuSection = ({onClose}: MobileMenuSectionPropsType) => {
         </div>
       </div>
       <div className="grow">
-        
+        <MobileMenuNavigation />
       </div>
       <div className="flex items-center gap-4">
         <Button size="full" color="blue">
