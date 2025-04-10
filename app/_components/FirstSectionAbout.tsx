@@ -11,10 +11,10 @@ const FirstSectionAbout = () => {
           Next.js Starter for Business
         </span>
       </div>
-      <h1 className="font-bold text-5xl w-[510px] lg:w-[500px] leading-[60px] mb-6">
+      <h1 className="font-bold text-3xl sm:text-5xl  sm:w-[510px] lg:w-[500px] leading-[45px] sm:leading-[60px] mb-6">
         Next.js Boilerplate for Your Business
       </h1>
-      <p className="text-[#79808a] w-[530px] mb-14">
+      <p className="text-[#79808a] sm:w-[530px] mb-14">
         Handcrafted Next.js starter for your next - Startup, Business, Agency or
         SaaS Website. Comes with refreshing design, integrations and everything
         you need to kickstart your next web project.

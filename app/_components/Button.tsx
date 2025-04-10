@@ -20,7 +20,7 @@ const Button = ({ children, color, size }: ButtonPropsType) => {
     );
   return (
     <button
-      className={`rounded-sm px-5 py-3 text-white transition-all duration-150 cursor-pointer  ${
+      className={`rounded-sm px-3 py-2 text-sm sm:text-base sm:px-5 sm:py-3 text-white transition-all duration-150 cursor-pointer  ${
         color === "blue" && "bg-[#4a6cf7]  hover:opacity-90"
       } ${color === "dark" && "bg-[#222c40] hover:bg-[#4a6cf7]"} ${
         color === "noColor" && "bg-transparent hover:text-[#4a6cf7]"
