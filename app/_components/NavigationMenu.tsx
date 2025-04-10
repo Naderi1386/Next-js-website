@@ -25,7 +25,9 @@ const NavigationMenu = ({ title, items }: NavigationMenuPropsType) => {
         {title}
         {isOpen ? <FaAngleUp /> : <FaAngleDown />}
       </div>
+
       {isOpen && <NavigationMenuBox items={items} />}
+
     </div>
   );
 };

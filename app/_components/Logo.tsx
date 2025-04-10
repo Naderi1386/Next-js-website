@@ -11,6 +11,7 @@ const Logo = () => {
           width={200}
           height={180}
           className="cursor-pointer"
+          quality={70}
         />
       </Link>
     </div>
