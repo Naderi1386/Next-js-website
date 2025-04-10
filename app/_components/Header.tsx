@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 
@@ -7,6 +8,12 @@ const Header = () => {
       <div className="flex items-center gap-14">
         <Logo />
         <Navigation />
+      </div>
+      <div>
+        <div className="flex items-center gap-4">
+          <Button color="blue">Sign in</Button>
+          <Button color="dark">Sign up</Button>
+        </div>
       </div>
     </header>
   );
