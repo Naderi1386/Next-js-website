@@ -3,7 +3,6 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import Header from "./_components/Header";
-import Footer from "./_components/Footer";
 const inter = Inter({
   display: "swap",
   subsets: ["latin"],
@@ -26,7 +25,6 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
         <div>
           <Header />
           <main>{children}</main>
-          <Footer />
         </div>
       </body>
     </html>

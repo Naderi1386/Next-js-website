@@ -11,7 +11,11 @@ const NavigationMenuBox = ({ items }: NavigationMenuBoxPropsType) => {
         {items.map((item, index) => (
           <li key={index}>
             <Link
-              className="text-[#79808a] transition-all duration-150 hover:text-white"
+              className={`  ${
+                index === 0
+                  ? "text-white"
+                  : "text-[#79808a] hover:text-white transition-all duration-150"
+              } `}
               href={item.href}
             >
               {item.text}
