@@ -10,7 +10,7 @@ interface SearchBoxPropsType {
 const SearchBox = ({ handleChange }: SearchBoxPropsType) => {
   const [inputVal, setInputVal] = useState("");
   return (
-    <div className="flex items-center justify-center fixed inset-0">
+    <div className="flex items-center justify-center fixed inset-0 px-6">
       <div
         className="  fixed inset-0  backdrop-brightness-50 backdrop-blur-[2px] "
         onClick={() => handleChange(false)}
@@ -23,7 +23,7 @@ const SearchBox = ({ handleChange }: SearchBoxPropsType) => {
             onChange={(e) => setInputVal(e.target.value)}
             type="text"
             placeholder="Search Entire Site | Products, Docs, Pages ..."
-            className="grow outline-none"
+            className="grow outline-none text-[11px] sm:text-sm"
           />
           {inputVal && (
             <button className="cursor-pointer" onClick={() => setInputVal("")}>

@@ -7,7 +7,7 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 const MobileMenuNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex flex-col justify-center items-center gap-7 h-full">
+    <div className="flex flex-col justify-center items-center gap-4 sm:gap-7 h-full">
       {navItems.map((item) => (
         <Link
           className="text-[#79808a] transition-all duration-150 hover:text-white hover:scale-105"
