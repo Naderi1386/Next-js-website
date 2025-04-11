@@ -2,5 +2,7 @@
 
 @theme {
   --breakpoint-custome-lg: 1120px;
+  --breakpoint-sm2x: 550px;
+
   
 }
