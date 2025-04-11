@@ -1,9 +1,9 @@
-import Image from "next/image"
+import Image from "next/image";
 
 const FirstSectionImages = () => {
   return (
-    <div className="basis-full custome-lg:basis-[50%] flex justify-end">
-      <div className="w-full relative">
+    <div className="basis-full custome-lg:basis-[50%] flex justify-end ">
+      <div className="w-full relative ">
         <div className="relative w-full sm:w-[560px] custome-lg:w-full  h-[500px]">
           <Image
             fill
@@ -24,6 +24,6 @@ const FirstSectionImages = () => {
       </div>
     </div>
   );
-}
+};
 
-export default FirstSectionImages
+export default FirstSectionImages;

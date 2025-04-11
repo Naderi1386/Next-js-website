@@ -10,12 +10,12 @@ interface SearchBoxPropsType {
 const SearchBox = ({ handleChange }: SearchBoxPropsType) => {
   const [inputVal, setInputVal] = useState("");
   return (
-    <div className="flex items-center justify-center fixed inset-0 px-6 z-[1000]">
+    <div className="flex items-center justify-center fixed inset-0 px-6  ">
       <div
-        className="  fixed inset-0  backdrop-brightness-50 backdrop-blur-[2px] "
+        className="fixed inset-0 backdrop-brightness-50 backdrop-blur-[2px] z-[1000] "
         onClick={() => handleChange(false)}
       ></div>
-      <div className="w-[600px] h-[550px] bg-[#111722]  rounded-[8px] text-white z-[10]">
+      <div className="w-[600px] h-[550px] bg-[#111722]  rounded-[8px] text-white z-[10000] ">
         <div className="px-4 py-6 border-b border-solid border-white/15 flex items-center gap-3 font-normal">
           <IoSearch size={26} color="white" className="cursor-pointer" />
           <input
