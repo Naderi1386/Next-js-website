@@ -12,7 +12,7 @@ const Header = () => {
         <Navigation />
       </div>
       <div className="flex items-center gap-6">
-        <div className="hidden lg:flex lg:items-center lg:gap-4">
+        <div className="hidden custome-lg:flex custome-lg:items-center custome-lg:gap-4">
           <Button color="blue">Sign in</Button>
           <Button color="dark">Sign up</Button>
         </div>

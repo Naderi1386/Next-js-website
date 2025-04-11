@@ -6,7 +6,7 @@ import MobileMenuSection from "./MobileMenuSection";
 const HeaderMobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="block lg:hidden">
+    <div className="block custome-lg:hidden">
       <button onClick={() => setIsOpen(true)} className="cursor-pointer pt-2">
         <IoMenu size={26} color="white" />
       </button>

@@ -18,7 +18,7 @@ export const items: NavigationMenuItemType[] = [
 
 const Navigation = () => {
   return (
-    <nav className="hidden lg:block">
+    <nav className="hidden custome-lg:block">
       <div className="flex items-center gap-10">
         {navItems.map((item) => (
           <Link
@@ -29,10 +29,7 @@ const Navigation = () => {
             {item.text}
           </Link>
         ))}
-        <NavigationMenu
-          title="Pages"
-          items={items}
-        />
+        <NavigationMenu title="Pages" items={items} />
       </div>
     </nav>
   );

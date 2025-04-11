@@ -2,9 +2,9 @@ import Image from "next/image"
 
 const FirstSectionImages = () => {
   return (
-    <div className="basis-full lg:basis-[50%] flex justify-end">
+    <div className="basis-full custome-lg:basis-[50%] flex justify-end">
       <div className="w-full relative">
-        <div className="relative h-[500px]">
+        <div className="relative w-[560px] custome-lg:w-full  h-[500px]">
           <Image
             fill
             className="object-cover"

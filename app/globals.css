@@ -1,2 +1,6 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-custome-lg: 1120px;
+  
+}
