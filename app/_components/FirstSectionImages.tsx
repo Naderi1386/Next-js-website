@@ -12,8 +12,8 @@ const FirstSectionImages = () => {
             src={"/images/image-2.webp"}
           />
         </div>
-        <div className=" backdrop-blur-sm border border-solid border-white/10 w-[300px] h-[350px] sm2x:w-[350px] sm2x:h-[410px]   absolute left-[-.2rem] sm2x:left-[-.5rem] bottom-[-1.8rem]  "></div>
-        <div className="w-[300px] h-[350px] sm2x:w-[350px] sm2x:h-[410px]  absolute left-[-1.5rem] sm2x:left-[-2.2rem] bottom-[-3.5rem] ">
+        <div className=" backdrop-blur-sm border border-solid border-white/10 w-[250px] h-[300px] sm2x:w-[350px] sm2x:h-[410px]   absolute left-[-.2rem] sm2x:left-[-.5rem] bottom-[-1.8rem]  "></div>
+        <div className="w-[250px] h-[300px] sm2x:w-[350px] sm2x:h-[410px]  absolute left-[-1.5rem] sm2x:left-[-2.2rem] bottom-[-3.5rem] ">
           <Image
             alt="img-1"
             fill
