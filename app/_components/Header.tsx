@@ -6,7 +6,7 @@ import Navigation from "./Navigation";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between gap-8 bg-[#111722] px-8 sm:px-22 py-4 font-semibold">
+    <header className="flex items-center justify-between sticky top-0 gap-8 bg-[#111722] px-8 sm:px-22 py-4 font-semibold">
       <div className="flex items-center gap-14">
         <Logo />
         <Navigation />

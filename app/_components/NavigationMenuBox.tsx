@@ -6,8 +6,8 @@ interface NavigationMenuBoxPropsType {
 }
 const NavigationMenuBox = ({ items }: NavigationMenuBoxPropsType) => {
   return (
-    <div className="absolute left-0 right-0 bottom-[-20rem] mx-auto w-[250px] pt-[10rem]">
-      <ul className="flex flex-col bg-[#2c3443]  rounded-[4px] px-8 py-6 space-y-4 z-[50] ">
+    <div className="absolute left-0 right-0 bottom-[-20rem] mx-auto w-[250px] pt-[10rem] ">
+      <ul className="flex flex-col bg-[#2c3443]  rounded-[4px] px-8 py-6 space-y-4  ">
         {items.map((item, index) => (
           <li key={index}>
             <Link

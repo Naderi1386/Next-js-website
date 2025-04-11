@@ -10,7 +10,7 @@ interface SearchBoxPropsType {
 const SearchBox = ({ handleChange }: SearchBoxPropsType) => {
   const [inputVal, setInputVal] = useState("");
   return (
-    <div className="flex items-center justify-center fixed inset-0 px-6">
+    <div className="flex items-center justify-center fixed inset-0 px-6 z-[1000]">
       <div
         className="  fixed inset-0  backdrop-brightness-50 backdrop-blur-[2px] "
         onClick={() => handleChange(false)}
