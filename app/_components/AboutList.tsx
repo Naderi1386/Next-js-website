@@ -38,9 +38,9 @@ const AboutList = ({ type }: AboutListPropsType) => {
   const item = aboutItems.find((item) => item.type === type);
   return (
     <div className="text-white mt-16  px-2 lg:px-16 ">
-      <div className="flex items-center justify-between gap-10">
-        <div className={`basis-[50%]  ${type !== "mission" && "order-1"} py-8`}>
-          <h2 className="font-bold text-white text-[2.3rem] w-[450px] mb-7">
+      <div className="flex flex-col custome-lg:flex-row custome-lg:items-center custome-lg:justify-between gap-10">
+        <div className={`basis-full lg:basis-[50%]  ${type !== "mission" && "order-1"} py-8`}>
+          <h2 className="font-bold text-white text-[2.3rem] w-full sm2x:w-[450px] mb-7">
             {item?.title}
           </h2>
           {item?.captions.map((cap, index) => (
@@ -54,7 +54,7 @@ const AboutList = ({ type }: AboutListPropsType) => {
             </p>
           ))}
         </div>
-        <div className="basis-[50%] relative">
+        <div className="basis-full custome-lg:basis-[50%] relative">
           <div className="w-[70%] relative h-[480px]">
             <Image
               src={"/images/img-1.webp"}
