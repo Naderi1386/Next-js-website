@@ -24,7 +24,7 @@ const About = () => {
                 : "text-white border-[#4b4e56] hover:border-blue-500"
             } `}
           >
-            <span>{item.text}</span>{" "}
+            <span className="text-sm sm2x:text-base">{item.text}</span>{" "}
           </li>
         ))}
       </ul>
