@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AboutList from "./AboutList";
 
 const stateItems = [
   { text: "About Us", value: "about" },
@@ -10,6 +11,8 @@ const stateItems = [
 const About = () => {
   const [type, setType] = useState("about");
   return (
+    <div>
+
     <div className="px-2 lg:px-16 ">
       <ul className="flex">
         {stateItems.map((item, index) => (
@@ -28,6 +31,8 @@ const About = () => {
           </li>
         ))}
       </ul>
+    </div>
+      <AboutList type={type} />
     </div>
   );
 };
