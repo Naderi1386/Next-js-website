@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const aboutItems = [
   {
     title: "DB, Auth, Stripe, Sanity, and More",
@@ -32,9 +34,10 @@ interface AboutListPropsType {
   type: string;
 }
 const AboutList = ({ type }: AboutListPropsType) => {
+    
   const item = aboutItems.find((item) => item.type === type);
   return (
-    <div className="text-white mt-16 bg-gradient-to-t from-[#1d293d] to-[#0c0a09] px-2 lg:px-16 ">
+    <div className="text-white mt-16  px-2 lg:px-16 ">
       <div className="flex items-center justify-between gap-10">
         <div className={`basis-[50%]  ${type !== "mission" && "order-1"} py-8`}>
           <h2 className="font-bold text-white text-[2.3rem] w-[450px] mb-7">
@@ -51,7 +54,25 @@ const AboutList = ({ type }: AboutListPropsType) => {
             </p>
           ))}
         </div>
-        <div className="basis-[50%] bg-yellow-300">images</div>
+        <div className="basis-[50%] relative">
+          <div className="w-[70%] relative h-[480px]">
+            <Image
+              src={"/images/img-1.webp"}
+              alt="img-1"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="w-[320px] h-[365px] absolute right-10 bottom-16 backdrop-blur-sm border border-solid border-white/10"></div>
+          <div className="w-[320px] h-[365px] absolute right-3.5 bottom-10">
+            <Image
+              fill
+              className="object-cover"
+              src={"/images/img-2.webp"}
+              alt="img-2"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
