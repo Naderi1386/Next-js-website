@@ -1,3 +1,4 @@
+import About from "./About";
 import Title from "./Title";
 
 const ThirdSection = () => {
@@ -14,6 +15,9 @@ const ThirdSection = () => {
             convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
             ante in maximus.
           </p>
+        </div>
+        <div className="mt-24">
+            <About />
         </div>
       </div>
     </section>
