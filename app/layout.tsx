@@ -20,8 +20,8 @@ interface RootLayoutPropsType {
 
 export default function RootLayout({ children }: RootLayoutPropsType) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} antialiased `}>
         <div>
           <Header />
           <main>{children}</main>
