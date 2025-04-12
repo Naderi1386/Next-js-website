@@ -1,3 +1,4 @@
+import FeatureList from "./FeatureList";
 import Title from "./Title";
 
 const SecondSection = () => {
@@ -14,6 +15,9 @@ const SecondSection = () => {
             convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
             ante in maximus.
           </p>
+        </div>
+        <div className="mt-16">
+          <FeatureList />
         </div>
       </div>
     </section>
