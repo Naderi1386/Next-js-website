@@ -131,10 +131,10 @@ const featureItems: FeatureItemsType[] = [
 
 const FeatureList = () => {
   return (
-    <ul className="px-8 flex justify-between flex-wrap gap-12">
+    <ul className=" px-2 lg:px-8 flex justify-between flex-wrap gap-12">
       {featureItems.map((feature) => (
         <li
-          className="flex flex-col items-center gap-4 w-[30%] text-center"
+          className="flex flex-col items-center justify-center gap-4 w-full sm:w-[45%] lg:w-[30%] text-center"
           key={feature.title}
         >
             <div className="w-[90px] bg-stone-900 hover:bg-blue-500 h-[90px] rounded-[100%] flex items-center justify-center transition-all duration-150">
