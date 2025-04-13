@@ -25,15 +25,15 @@ const developers = [
 const DevelopersList = () => {
   const [Show, setShow] = useState<null | number>(null);
   return (
-    <ul className="flex justify-center items-center gap-7 mt-18">
+    <ul className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-9 mt-18">
       {developers.map((dev, index) => (
         <li
           onMouseEnter={() => setShow(index)}
           onMouseLeave={() => setShow(null)}
           key={dev.name}
-          className="w-[22%] text-center "
+          className="w-full sm:w-[45%] lg:w-[24%] text-center "
         >
-          <div className="w-full relative h-[295px] mb-6">
+          <div className="w-full relative h-[380px] sm:h-[330px] lg:h-[295px] mb-6">
             <Image
               alt={`person-${dev.name}-img`}
               src={dev.img}
