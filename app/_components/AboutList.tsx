@@ -67,7 +67,7 @@ const AboutList = ({ type }: AboutListPropsType) => {
               className="object-cover"
             />
           </div>
-          <div className="w-[240px] h-[290px] sm2x:w-[320px] sm2x:h-[365px] absolute right-[-.3rem] bottom-10 sm2x:bottom-16 backdrop-blur-sm border border-solid border-white/10"></div>
+          <div className="w-[240px] h-[290px] sm2x:w-[320px] sm2x:h-[365px] absolute right-[-.3rem] bottom-10 sm2x:bottom-16 backdrop-blur-[6px] border border-solid border-white/10"></div>
           <div className="w-[240px] h-[290px] sm2x:w-[320px] sm2x:h-[365px] absolute right-[-1.5rem] bottom-5 sm2x:right-3.5 sm2x:bottom-10">
             <Image
               fill
