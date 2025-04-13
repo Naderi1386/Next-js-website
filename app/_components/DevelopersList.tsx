@@ -22,8 +22,8 @@ const DevelopersList = () => {
   return (
     <ul className="flex justify-center items-center gap-7 mt-16">
       {developers.map((dev) => (
-        <li key={dev.name} className="w-[20%] text-center">
-          <div className="w-full relative h-[260px] mb-6">
+        <li key={dev.name} className="w-[22%] text-center relative">
+          <div className="w-full relative h-[295px] mb-6">
             <Image
               alt={`person-${dev.name}-img`}
               src={dev.img}
@@ -31,7 +31,7 @@ const DevelopersList = () => {
               className="object-cover rounded-md"
             />
           </div>
-          <h3 className="text-white font-bold  text-[22px] mb-3">
+          <h3 className="text-white font-bold  text-[22px] mb-2">
             {dev.name}
           </h3>
           <span className="text-[#79808a] font-semibold">{dev.skill}</span>
