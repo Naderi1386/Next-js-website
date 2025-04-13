@@ -13,7 +13,7 @@ const MobileMenuSection = ({ onClose }: MobileMenuSectionPropsType) => {
     <div className="bg-[#111722] fixed inset-0 px-8 py-4 font-semibold z-[100] flex flex-col">
       <div className="flex items-center justify-between">
         <Logo />
-        <div className="pt-2 flex items-center gap-4">
+        <div className="pt-1 flex items-center gap-4">
           <HeaderSearch />
           <button onClick={onClose} className="cursor-pointer">
             <IoClose color="white" size={34} />
