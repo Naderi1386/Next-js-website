@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import DeveloperIcons from "./DeveloperIcons";
+import { AnimatePresence } from "framer-motion";
 
 const developers = [
   {
@@ -39,7 +40,10 @@ const DevelopersList = () => {
               fill
               className="object-cover rounded-md"
             />
+            <AnimatePresence mode="wait">
             {Show===index && <DeveloperIcons />}
+
+            </AnimatePresence>
           </div>
           <h3 className="text-white font-bold  text-[22px] mb-2">{dev.name}</h3>
           <span className="text-[#79808a] font-semibold">{dev.skill}</span>
