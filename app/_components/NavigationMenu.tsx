@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { FaAngleUp } from "react-icons/fa";
 import NavigationMenuBox from "./NavigationMenuBox";
+import { AnimatePresence } from "framer-motion";
 
 export interface NavigationMenuItemType {
   text: string;
@@ -30,7 +31,11 @@ const NavigationMenu = ({ title, items }: NavigationMenuPropsType) => {
         {isOpen ? <FaAngleUp /> : <FaAngleDown />}
       </div>
 
-      {isOpen && <NavigationMenuBox items={items} />}
+      {isOpen && (
+        <AnimatePresence mode="wait">
+          <NavigationMenuBox items={items} />
+        </AnimatePresence>
+      )}
     </div>
   );
 };
