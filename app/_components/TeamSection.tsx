@@ -1,3 +1,4 @@
+import DevelopersList from "./DevelopersList";
 import Title from "./Title";
 
 const TeamSection = () => {
@@ -15,6 +16,7 @@ const TeamSection = () => {
             ante in maximus.
           </p>
         </div>
+        <DevelopersList />
       </div>
     </section>
   );
