@@ -51,6 +51,16 @@ const PortfolioItems = () => {
                 className="object-cover rounded-md"
               />
             </div>
+            {isAllData && (
+              <div className="relative w-[75%] h-60 mt-2">
+                <Image
+                  alt="img-4"
+                  src={data.at(data.length - 1)?.img as string}
+                  fill
+                  className="object-cover rounded-md"
+                />
+              </div>
+            )}
           </div>
           <div className="basis-[45%]">
             <div className="relative w-full h-[35rem]">
