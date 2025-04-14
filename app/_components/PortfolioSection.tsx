@@ -3,7 +3,7 @@ import Title from "./Title";
 
 const PortfolioSection = () => {
   return (
-    <section id="#portfolio">
+    <section id="portfolio">
       <div className="px-8 sm:px-18 py-20 bg-[#0c0a09]">
         <div className="text-center text-white relative">
           <Title>PORTFOLIO</Title>
