@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import MobileMenuSection from "./MobileMenuSection";
+import { AnimatePresence } from "framer-motion";
 
 const HeaderMobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,9 @@ const HeaderMobileMenu = () => {
       <button onClick={() => setIsOpen(true)} className="cursor-pointer pt-2">
         <IoMenu size={26} color="white" />
       </button>
-      {isOpen && <MobileMenuSection onClose={() => setIsOpen(false)} />}
+      <AnimatePresence>
+        {isOpen && <MobileMenuSection onClose={() => setIsOpen(false)} />}
+      </AnimatePresence>
     </div>
   );
 };

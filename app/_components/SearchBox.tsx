@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import {motion} from "framer-motion"
 import { IoClose, IoSearch } from "react-icons/io5";
 
 interface SearchBoxPropsType {
@@ -10,7 +11,13 @@ interface SearchBoxPropsType {
 const SearchBox = ({ handleChange }: SearchBoxPropsType) => {
   const [inputVal, setInputVal] = useState("");
   return (
-    <div className="flex items-center justify-center fixed inset-0 px-6  ">
+    <motion.div
+      transition={{ duration: "0.1", ease: "easeIn" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="flex items-center justify-center fixed inset-0 px-6  "
+    >
       <div
         className="fixed inset-0 backdrop-brightness-50 backdrop-blur-[2px] z-[1000] "
         onClick={() => handleChange(false)}
@@ -32,7 +39,7 @@ const SearchBox = ({ handleChange }: SearchBoxPropsType) => {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
