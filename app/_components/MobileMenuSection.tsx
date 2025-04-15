@@ -21,7 +21,7 @@ const MobileMenuSection = ({ onClose }: MobileMenuSectionPropsType) => {
         </div>
       </div>
       <div className="grow">
-        <MobileMenuNavigation />
+        <MobileMenuNavigation onClose={onClose} />
       </div>
       <div className="flex items-center gap-4">
         <Button size="full" color="blue">
