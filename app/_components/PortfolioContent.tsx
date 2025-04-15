@@ -20,7 +20,7 @@ const PortfolioContent = ({ data, isAllData }: PortfolioContentPropsType) => {
           <div
             onMouseEnter={() => setShow(0)}
             onMouseLeave={() => setShow(null)}
-            className="relative w-full h-[100px] sm:h-40"
+            className="relative w-full h-[100px] sm:h-40 overflow-hidden"
           >
             <Image
               alt="img-1"
@@ -38,7 +38,7 @@ const PortfolioContent = ({ data, isAllData }: PortfolioContentPropsType) => {
             <div
               onMouseEnter={() => setShow(data.length - 1)}
               onMouseLeave={() => setShow(null)}
-              className="relative w-[75%] h-40 sm:h-56 mt-2"
+              className="relative w-[75%] h-40 sm:h-56 mt-2 overflow-hidden"
             >
               <Image
                 alt="img-4"
@@ -56,7 +56,7 @@ const PortfolioContent = ({ data, isAllData }: PortfolioContentPropsType) => {
           <div
             onMouseEnter={() => setShow(1)}
             onMouseLeave={() => setShow(null)}
-            className="relative w-full h-[15rem] sm:h-[20rem] md:h-[30rem] "
+            className="relative w-full h-[15rem] sm:h-[20rem] md:h-[30rem] overflow-hidden "
           >
             <Image
               alt="img-2"
@@ -73,7 +73,7 @@ const PortfolioContent = ({ data, isAllData }: PortfolioContentPropsType) => {
               setShow(isAllData ? data.length - 2 : data.length - 1)
             }
             onMouseLeave={() => setShow(null)}
-            className="block custome-md:hidden mt-2 relative w-full h-40 xl:h-60"
+            className="block custome-md:hidden mt-2 relative w-full h-40 xl:h-60 overflow-hidden"
           >
             <Image
               alt="img-3"
@@ -99,7 +99,7 @@ const PortfolioContent = ({ data, isAllData }: PortfolioContentPropsType) => {
             setShow(isAllData ? data.length - 2 : data.length - 1)
           }
           onMouseLeave={() => setShow(null)}
-          className="relative w-full h-36 xl:h-60"
+          className="relative w-full h-36 xl:h-60 overflow-hidden"
         >
           <Image
             alt="img-3"
