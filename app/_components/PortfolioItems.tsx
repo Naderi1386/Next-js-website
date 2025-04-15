@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import PortfolioChangeFilter from "./PortfolioChangeFilter";
+import PortfolioContent from "./PortfolioContent";
 
 const portfolioItems = [
   { type: ["Brand", "Ecommerce"], img: "/images/brand-1.webp" },
@@ -25,58 +25,7 @@ const PortfolioItems = () => {
         filter={filter}
         setFilter={(val: string) => setFilter(val)}
       />
-      <div className="flex items-start custome-md:justify-between gap-14 xl:gap-24 px-4 custome-md:px-16">
-        <div className=" basis-[80%] custome-md:basis-[70%] flex items-start gap-2">
-          <div className="basis-[65%] custome-md:basis-[55%]">
-            <div className="relative w-full h-40">
-              <Image
-                alt="img-1"
-                src={data.at(0)?.img as string}
-                fill
-                className="object-center rounded-md"
-              />
-            </div>
-            {isAllData && (
-              <div className="relative w-[75%] h-60 mt-2">
-                <Image
-                  alt="img-4"
-                  src={data.at(data.length - 1)?.img as string}
-                  fill
-                  className="object-center rounded-md"
-                />
-              </div>
-            )}
-          </div>
-          <div className="basis-[35%] custome-md:basis-[45%]">
-            <div className="relative w-full h-[20rem] custome-md:h-[35rem]">
-              <Image
-                alt="img-2"
-                src={data.at(1)?.img as string}
-                fill
-                className="object-cover rounded-md"
-              />
-            </div>
-            <div className="block custome-md:hidden mt-2 relative w-full h-36 xl:h-60">
-              <Image
-                alt="img-3"
-                src={data.at(data.length - 1)?.img as string}
-                fill
-                className="object-cover rounded-md"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="hidden custome-md:block custome-md:basis-[30%]">
-          <div className="relative w-full h-36 xl:h-60">
-            <Image
-              alt="img-3"
-              src={data.at(data.length - 1)?.img as string}
-              fill
-              className="object-cover rounded-md"
-            />
-          </div>
-        </div>
-      </div>
+      <PortfolioContent data={data} isAllData={isAllData} />
     </div>
   );
 };
