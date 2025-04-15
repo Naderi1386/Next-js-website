@@ -1,3 +1,4 @@
+import ClientSection from "./_components/ClientSection";
 import FirstSection from "./_components/FirstSection";
 import PortfolioSection from "./_components/PortfolioSection";
 import SecondSection from "./_components/SecondSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <ThirdSection />
       <TeamSection />
       <PortfolioSection />
+      <ClientSection/>
     </div>
   );
 }

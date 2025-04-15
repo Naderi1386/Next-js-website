@@ -21,7 +21,7 @@ const PortfolioSection = () => {
       </div>
       <div className="bg-[#0c0a09]">
         <PortfolioItems />
-        <div className="flex justify-center py-8">
+        <div className="flex justify-center pt-8 pb-20">
           <Button color="blue">
             <span className="flex items-center gap-2">
               See More Projects <MdArrowRightAlt size={22} color="white" />
