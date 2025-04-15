@@ -6,7 +6,7 @@ interface PortfolioChangeFilterPropsType{
 
 const PortfolioChangeFilter = ({filter,setFilter}: PortfolioChangeFilterPropsType) => {
   return (
-    <ul className="flex items-center justify-center gap-5 text-white font-semibold mb-12">
+    <ul className="flex items-center justify-center gap-8 text-white font-semibold mb-12">
       <li
         className={`${filter === "All" && "underline"} cursor-pointer`}
         onClick={() => setFilter("All")}
