@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import PortfolioChangeFilter from "./PortfolioChangeFilter";
 
 const portfolioItems = [
   { type: ["Brand", "Ecommerce"], img: "/images/brand-1.webp" },
@@ -11,7 +12,7 @@ const portfolioItems = [
 ];
 
 const PortfolioItems = () => {
-  const [filter, setFilter] = useState<"All" | "Brand" | "Ecommerce">("All");
+  const [filter, setFilter] = useState("All");
   const data =
     filter === "All"
       ? portfolioItems
@@ -20,27 +21,11 @@ const PortfolioItems = () => {
   const isAllData = data.length === 4;
   return (
     <div className="pt-20 pb-16">
-      <ul className="flex items-center justify-center gap-5 text-white font-semibold mb-12">
-        <li
-          className={`${filter === "All" && "underline"} cursor-pointer`}
-          onClick={() => setFilter("All")}
-        >
-          <span>All</span>
-        </li>
-        <li
-          className={`${filter === "Brand" && "underline"} cursor-pointer`}
-          onClick={() => setFilter("Brand")}
-        >
-          <span>Brand</span>
-        </li>
-        <li
-          className={`${filter === "Ecommerce" && "underline"} cursor-pointer`}
-          onClick={() => setFilter("Ecommerce")}
-        >
-          <span>Ecommerce</span>
-        </li>
-      </ul>
-      <div className="flex items-start justify-between gap-14 xl:gap-24 px-4 custome-md:px-16">
+      <PortfolioChangeFilter
+        filter={filter}
+        setFilter={(val: string) => setFilter(val)}
+      />
+      <div className="flex items-start custome-md:justify-between gap-14 xl:gap-24 px-4 custome-md:px-16">
         <div className=" basis-[80%] custome-md:basis-[70%] flex items-start gap-2">
           <div className="basis-[65%] custome-md:basis-[55%]">
             <div className="relative w-full h-40">
@@ -48,7 +33,7 @@ const PortfolioItems = () => {
                 alt="img-1"
                 src={data.at(0)?.img as string}
                 fill
-                className="object-cover rounded-md"
+                className="object-center rounded-md"
               />
             </div>
             {isAllData && (
@@ -57,7 +42,7 @@ const PortfolioItems = () => {
                   alt="img-4"
                   src={data.at(data.length - 1)?.img as string}
                   fill
-                  className="object-cover rounded-md"
+                  className="object-center rounded-md"
                 />
               </div>
             )}

@@ -3,8 +3,5 @@
 @theme {
   --breakpoint-custome-lg: 1120px;
   --breakpoint-sm2x: 550px;
-    --breakpoint-custome-md: 870px;
-
-
-  
+  --breakpoint-custome-md: 870px;
 }
