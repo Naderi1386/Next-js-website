@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     template: "%s GoStartup",
     default: "GoStartup",
   },
+  description:"Next-js Website"
 };
 
 interface RootLayoutPropsType {
