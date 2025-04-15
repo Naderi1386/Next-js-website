@@ -18,10 +18,12 @@ const ClientSection = () => {
         </div>
       </div>
       <div className="bg-gradient-to-t from-[#1d293d] to-[#0c0a09] px-52 py-16">
-        <ClientInfo />
+        <div>
+          <ClientInfo />
+        </div>
       </div>
     </section>
   );
-}
+};
 
-export default ClientSection
+export default ClientSection;
