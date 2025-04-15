@@ -1,3 +1,5 @@
+import { MdArrowRightAlt } from "react-icons/md";
+import Button from "./Button";
 import PortfolioItems from "./PortfolioItems";
 import Title from "./Title";
 
@@ -19,6 +21,13 @@ const PortfolioSection = () => {
       </div>
       <div className="bg-[#0c0a09]">
         <PortfolioItems />
+        <div className="flex justify-center py-8">
+          <Button color="blue">
+            <span className="flex items-center gap-2">
+              See More Projects <MdArrowRightAlt size={22} color="white" />
+            </span>
+          </Button>
+        </div>
       </div>
     </section>
   );
