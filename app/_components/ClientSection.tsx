@@ -17,7 +17,7 @@ const ClientSection = () => {
           </p>
         </div>
       </div>
-      <div className="bg-gradient-to-r to-[#1d293d] from-[#0c0a09] px-38 py-16">
+      <div className="bg-gradient-to-t from-[#1d293d] to-[#0c0a09] px-52 py-16">
         <ClientInfo />
       </div>
     </section>
