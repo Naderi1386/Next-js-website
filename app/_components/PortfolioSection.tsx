@@ -16,7 +16,8 @@ const PortfolioSection = () => {
             ante in maximus.
           </p>
         </div>
-
+      </div>
+      <div className="bg-[#0c0a09]">
         <PortfolioItems />
       </div>
     </section>

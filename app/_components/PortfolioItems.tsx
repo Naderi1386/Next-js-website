@@ -19,7 +19,7 @@ const PortfolioItems = () => {
 
   const isAllData = data.length === 4;
   return (
-    <div className="mt-20">
+    <div className="pt-20 pb-16">
       <ul className="flex items-center justify-center gap-5 text-white font-semibold mb-12">
         <li
           className={`${filter === "All" && "underline"} cursor-pointer`}
@@ -40,9 +40,9 @@ const PortfolioItems = () => {
           <span>Ecommerce</span>
         </li>
       </ul>
-      <div className="flex items-start justify-between gap-14 xl:gap-24 px-16">
+      <div className="flex items-start justify-between gap-14 xl:gap-24 px-4 custome-md:px-16">
         <div className=" basis-[80%] custome-md:basis-[70%] flex items-start gap-2">
-          <div className="basis-[55%]">
+          <div className="basis-[65%] custome-md:basis-[55%]">
             <div className="relative w-full h-40">
               <Image
                 alt="img-1"
@@ -62,8 +62,8 @@ const PortfolioItems = () => {
               </div>
             )}
           </div>
-          <div className="basis-[45%]">
-            <div className="relative w-full h-[35rem]">
+          <div className="basis-[35%] custome-md:basis-[45%]">
+            <div className="relative w-full h-[20rem] custome-md:h-[35rem]">
               <Image
                 alt="img-2"
                 src={data.at(1)?.img as string}
@@ -81,7 +81,7 @@ const PortfolioItems = () => {
             </div>
           </div>
         </div>
-        <div className=" hidden custome-md:block custome-md:basis-[30%]">
+        <div className="hidden custome-md:block custome-md:basis-[30%]">
           <div className="relative w-full h-36 xl:h-60">
             <Image
               alt="img-3"
