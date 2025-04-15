@@ -40,8 +40,8 @@ const PortfolioItems = () => {
           <span>Ecommerce</span>
         </li>
       </ul>
-      <div className="flex items-start justify-between gap-24 px-16">
-        <div className=" basis-[70%] flex items-start gap-2">
+      <div className="flex items-start justify-between gap-14 xl:gap-24 px-16">
+        <div className=" basis-[80%] custome-md:basis-[70%] flex items-start gap-2">
           <div className="basis-[55%]">
             <div className="relative w-full h-40">
               <Image
@@ -71,10 +71,18 @@ const PortfolioItems = () => {
                 className="object-cover rounded-md"
               />
             </div>
+            <div className="block custome-md:hidden mt-2 relative w-full h-36 xl:h-60">
+              <Image
+                alt="img-3"
+                src={data.at(data.length - 1)?.img as string}
+                fill
+                className="object-cover rounded-md"
+              />
+            </div>
           </div>
         </div>
-        <div className=" basis-[30%]">
-          <div className="relative w-full h-60">
+        <div className=" hidden custome-md:block custome-md:basis-[30%]">
+          <div className="relative w-full h-36 xl:h-60">
             <Image
               alt="img-3"
               src={data.at(data.length - 1)?.img as string}
