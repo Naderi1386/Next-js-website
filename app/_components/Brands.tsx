@@ -8,9 +8,9 @@ const brands = [
   "https://go.demo.nextjstemplates.com/images/brands/plainadmin.svg",
 ];
 const Brands = () => {
-  return <ul className="flex items-center justify-center gap-7">
-    {brands.map((brand,index)=><li className="h-[40px] w-[150px] relative" key={index}>
-        <Image fill className="object-cover" src={brand} alt={`brand-${index}`} />
+  return <ul className="flex items-center justify-center gap-8">
+    {brands.map((brand,index)=><li className="h-[40px] w-[175px] relative" key={index}>
+        <Image fill className="object-center" src={brand} alt={`brand-${index}`} />
     </li>)}
 
   </ul>;
