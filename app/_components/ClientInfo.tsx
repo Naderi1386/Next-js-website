@@ -1,4 +1,6 @@
+"use client"
 import Image from "next/image";
+import { useState } from "react";
 
 const clients = [
   {
@@ -10,19 +12,20 @@ const clients = [
   {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim. In ac lectus vel orci accumsan ultricies at in libero accumsan Lorem Ipsum has been the industry's standard",
     img: "/images/client-1.webp",
-    name: "Naimur Rahman",
-    skill: "Product Designer @ Pimjo",
+    name: "Musharof Chy",
+    skill: "Founder @ Pimjo",
   },
   {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim. In ac lectus vel orci accumsan ultricies at in libero accumsan Lorem Ipsum has been the industry's standard",
     img: "/images/client-1.webp",
-    name: "Naimur Rahman",
-    skill: "Product Designer @ Pimjo",
+    name: "Shafiq Hammad",
+    skill: "Frontend Developer @ Pimjo",
   },
 ];
 
 const ClientInfo = () => {
-  const data = clients.at(0);
+  const [index,setIndex]=useState(0)
+  const data = clients.at(index);
   return (
     <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-10 lg:gap-20">
       <div className="basis-full text-center lg:text-left lg:basis-[65%] order-1 lg:order-[0]">
