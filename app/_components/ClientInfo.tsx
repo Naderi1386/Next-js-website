@@ -28,29 +28,29 @@ const ClientInfo = () => {
   const [index, setIndex] = useState(0);
   const data = clients.at(index);
   const nextIndex = () => {
-    if (index < clients.length - 1) setIndex((index) => index + 1);
+    setIndex((index) => index + 1);
   };
   const previousIndex = () => {
-    if (index > 0) setIndex((index) => index - 1);
+    setIndex((index) => index - 1);
   };
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full">
       <AnimatePresence mode="wait">
         <motion.div
           drag="x"
           key={index}
           onDragEnd={(_, info) => {
-            if (info.offset.x < -100 && index !== clients.length - 1)
+            if (info.offset.x < -200 && index !== clients.length - 1)
               nextIndex();
-            else if (info.offset.x > 100 && index > 0) previousIndex();
+            else if (info.offset.x > 200 && index > 0) previousIndex();
           }}
-          initial={{ x: 100 }}
+          initial={{ x: 50 }}
           animate={{ x: 0 }}
-          exit={{ x: -100 }}
+          exit={{ x: -50 }}
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={index === 0 || index < clients.length - 1}
-          transition={{ duration: "0.15", ease: "easeIn" }}
+          transition={{ duration: "0.25", ease: "easeIn" }}
           className="flex flex-col lg:flex-row items-center lg:justify-between gap-10 lg:gap-20"
         >
           <div className="basis-full text-center lg:text-left lg:basis-[65%] order-1 lg:order-[0]">
