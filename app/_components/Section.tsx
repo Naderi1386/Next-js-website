@@ -1,18 +1,18 @@
 import { ReactNode } from "react";
 import Title from "./Title";
-interface TitlesPropsType {
+interface SectionPropsType {
   titleText?: string;
-  mainTitle: string;
+  mainTitle: string | ReactNode;
   caption: string;
   children?: ReactNode;
 }
 
-const Titles = ({
+const Section = ({
   titleText,
   mainTitle,
   caption,
   children,
-}: TitlesPropsType) => {
+}: SectionPropsType) => {
   return (
     <div className="px-8 sm:px-18 py-40 bg-[#0c0a09]">
       <div className="text-center text-white relative">
@@ -28,4 +28,4 @@ const Titles = ({
   );
 };
 
-export default Titles;
+export default Section;
