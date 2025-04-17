@@ -24,7 +24,7 @@ const brands = [
 ];
 const Brands = () => {
   return (
-    <ul className="flex items-center justify-center gap-8">
+    <ul className="flex flex-wrap items-center justify-center gap-8">
       {brands.map((brand, index) => (
         <li key={index}>
           <a className="block h-[40px] w-[175px] relative" href={brand.href}>
