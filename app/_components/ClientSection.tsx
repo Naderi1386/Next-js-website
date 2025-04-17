@@ -11,7 +11,7 @@ const ClientSection = () => {
             convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
             ante in maximus."
       />
-      <div className="bg-gradient-to-t from-[#1d293d] to-[#0c0a09] px-10 md:px-28 lg:px-52 py-16 overflow-hidden">
+      <div className="bg-gradient-to-t from-[#1d293d] to-[#0c0a09] px-10 md:px-28 lg:px-52 py-10 overflow-hidden">
         <div>
           <ClientInfo />
         </div>

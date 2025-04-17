@@ -20,7 +20,7 @@ const PortfolioItems = () => {
 
   const isAllData = data.length === 4;
   return (
-    <div className="pt-20 pb-16">
+    <div className="pt-8 pb-16">
       <PortfolioChangeFilter
         filter={filter}
         setFilter={(val: string) => setFilter(val)}

@@ -14,7 +14,7 @@ const Section = ({
   children,
 }: SectionPropsType) => {
   return (
-    <div className="px-8 sm:px-18 py-40 bg-[#0c0a09]">
+    <div className="px-8 sm:px-18 py-32 bg-[#0c0a09]">
       <div className="text-center text-white relative">
         {titleText && <Title>{titleText}</Title>}
 

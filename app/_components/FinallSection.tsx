@@ -16,7 +16,7 @@ const FinallSection = () => {
             ante in maximus."
       >
         {" "}
-        <div className="mt-24 border-b border-solid border-white/15 pb-28">
+        <div className="mt-24 border-b border-solid border-white/15 pb-18">
           <Brands />
         </div>
       </Section>
