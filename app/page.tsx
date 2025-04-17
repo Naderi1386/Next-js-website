@@ -1,4 +1,5 @@
 import ClientSection from "./_components/ClientSection";
+import FinallSection from "./_components/FinallSection";
 import FirstSection from "./_components/FirstSection";
 import PortfolioSection from "./_components/PortfolioSection";
 import SecondSection from "./_components/SecondSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <TeamSection />
       <PortfolioSection />
       <ClientSection/>
+      <FinallSection />
     </div>
   );
 }
