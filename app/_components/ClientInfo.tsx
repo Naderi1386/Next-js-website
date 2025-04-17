@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -24,8 +24,14 @@ const clients = [
 ];
 
 const ClientInfo = () => {
-  const [index,setIndex]=useState(0)
+  const [index, setIndex] = useState(0);
   const data = clients.at(index);
+  const nextIndex = () => {
+    if (index !== clients.length - 1) setIndex((index) => index + 1);
+  };
+  const previusIndex = () => {
+    if (index > 0) setIndex((index) => index - 1);
+  };
   return (
     <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-10 lg:gap-20">
       <div className="basis-full text-center lg:text-left lg:basis-[65%] order-1 lg:order-[0]">
