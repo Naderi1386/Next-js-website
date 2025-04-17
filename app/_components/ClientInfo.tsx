@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const clients = [
   {
@@ -27,33 +28,53 @@ const ClientInfo = () => {
   const [index, setIndex] = useState(0);
   const data = clients.at(index);
   const nextIndex = () => {
-    if (index !== clients.length - 1) setIndex((index) => index + 1);
+    if (index < clients.length - 1) setIndex((index) => index + 1);
   };
-  const previusIndex = () => {
+  const previousIndex = () => {
     if (index > 0) setIndex((index) => index - 1);
   };
+
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-10 lg:gap-20">
-      <div className="basis-full text-center lg:text-left lg:basis-[65%] order-1 lg:order-[0]">
-        <p className="text-[#79808a] mb-8 text-base w-full lg:text-2xl lg:w-[75%] ">
-          {data?.text}
-        </p>
-        <span className="block text-white font-semibold text-lg mb-1">
-          {data?.name}
-        </span>
-        <span className="text-[#79808a]">{data?.skill}</span>
-      </div>
-      <div className="w-full lg:basis-[35%] relative">
-        <div className="absolute -right-5 -top-5  w-full h-[420px] backdrop-blur-sm bg-[#fff]/10  border border-solid border-white/5"></div>
-        <div className="w-full h-[420px] relative">
-          <Image
-            alt="client-1-img"
-            src={data?.img as string}
-            fill
-            className="object-cover"
-          />
-        </div>
-      </div>
+    <div className="w-full overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.div
+          drag="x"
+          key={index}
+          onDragEnd={(_, info) => {
+            if (info.offset.x < -100 && index !== clients.length - 1)
+              nextIndex();
+            else if (info.offset.x > 100 && index > 0) previousIndex();
+          }}
+          initial={{ x: 100 }}
+          animate={{ x: 0 }}
+          exit={{ x: -100 }}
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={index === 0 || index < clients.length - 1}
+          transition={{ duration: "0.15", ease: "easeIn" }}
+          className="flex flex-col lg:flex-row items-center lg:justify-between gap-10 lg:gap-20"
+        >
+          <div className="basis-full text-center lg:text-left lg:basis-[65%] order-1 lg:order-[0]">
+            <p className="text-[#79808a] mb-8 text-base w-full lg:text-2xl lg:w-[75%] ">
+              {data?.text}
+            </p>
+            <span className="block text-white font-semibold text-lg mb-1">
+              {data?.name}
+            </span>
+            <span className="text-[#79808a]">{data?.skill}</span>
+          </div>
+          <div className="w-full lg:basis-[35%] relative">
+            <div className="absolute -right-5 -top-5  w-full h-[420px] backdrop-blur-sm bg-[#fff]/10  border border-solid border-white/5"></div>
+            <div className="w-full h-[420px] relative">
+              <Image
+                alt="client-1-img"
+                src={data?.img as string}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
